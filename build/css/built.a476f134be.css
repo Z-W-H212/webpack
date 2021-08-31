@@ -1,0 +1,10 @@
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/css/index.css ***!
+  \***************************************************************************************************************/body,html{background-color:pink;margin:0;padding:0}
+/*!***********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/css/a.css ***!
+  \***********************************************************************************************************/#box1{-webkit-backface-visibility:hidden;backface-visibility:hidden;background-color:skyblue;display:flex;height:300px;width:100px}
+
+/*!***********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/css/b.css ***!
+  \***********************************************************************************************************/#box2{background-color:grey;height:200px;width:200px}

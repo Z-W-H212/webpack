@@ -27,7 +27,7 @@ function sum(...args) {
   return args.reduce((p, c) => p + c, 0);
 }
 
-console.log(sum(1, 2, 3, 4, 5));
+console.log(sum(1, 2, 3, 4, 5, 6));
 
 /**
  * 1、eslint不认识window、navigator全局变量

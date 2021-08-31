@@ -34,10 +34,11 @@ const {resolve} = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin') 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
-const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
+const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+const webpack  = require('webpack');
 
 // 设置nodejs环境变量
-process.env.NODE_ENV = 'production';
+process.env.NODE_ENV = 'development';
 
 module.exports = {
     // webpack配置
@@ -246,7 +247,9 @@ module.exports = {
         new WorkboxWebpackPlugin.GenerateSW({
             clientsClaim: true,
             skipWaiting: true
-        })
+        }),
+
+        new webpack.HotModuleReplacementPlugin(),
     ],
     /**
      * 可以将node_module单独打包成一个chunk
@@ -258,7 +261,7 @@ module.exports = {
         }
     },
     //模式
-    mode: 'production', // 开发模式
+    mode: 'development', // 开发模式
     // mode: 'production' 
     // 开发服务器：devServer：用来自动化（自动编译，自动打开浏览器，自动刷新浏览器）
     // 只会在内存中编译打包，不会有任何输出
@@ -266,14 +269,14 @@ module.exports = {
     devServer: {
         contentBase: resolve(__dirname, 'build'),
         // 启用gzip压缩，是代码体积小，运行速度更快
-        compress: true,
+        // compress: true,
         // 端口号
-        port: 3001,
-        open: true,
+        // port: 3001,
+        // open: true,
         //HMR功能开启
         hot: true
     },
-    devtool:'source-map',
+    // devtool:'source-map',
     target: 'web'
 }
 
