@@ -1,5 +1,5 @@
 function print() {
-  const prrint = 'HELLO PRINT 121234';
+  const prrint = 'HELLO PRINT 1212';
   console.log(prrint);
 }
 

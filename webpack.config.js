@@ -277,7 +277,7 @@ module.exports = {
         hot: true
     },
     // devtool:'source-map',
-    target: 'web'
+    // target: 'web'
 }
 
 /**
